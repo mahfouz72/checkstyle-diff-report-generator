@@ -76,7 +76,7 @@ jobs:
         run: main/scripts/generate-check-regression-report.sh
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.config_name }}
           path: contribution/checkstyle-tester/reports/diff
