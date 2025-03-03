@@ -45,14 +45,14 @@ jobs:
       - name: Checkout Checkstyle
         uses: actions/checkout@v3
         with:
-          repository: nrmancuso/checkstyle
+          repository: mahfouz72/checkstyle
           path: checkstyle
           fetch-depth: 0
 
       - name: Checkout Contribution
         uses: actions/checkout@v3
         with:
-          repository: nrmancuso/contribution
+          repository: mahfouz72/contribution
           path: contribution
 
       - name: Build patch-diff-report-tool
