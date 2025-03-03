@@ -50,7 +50,7 @@ jobs:
       - name: Checkout Checkstyle
         uses: actions/checkout@v3
         with:
-          repository: nrmancuso/checkstyle
+          repository: mahfouz72/checkstyle
           path: checkstyle
           fetch-depth: 0
 
