@@ -76,7 +76,7 @@ jobs:
         run: ./main/scripts/generate-antlr-regression-report.sh
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: antlr-report-${{ matrix.project_name }}
           path: contribution/checkstyle-tester/reports/diff
