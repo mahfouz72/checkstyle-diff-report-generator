@@ -50,8 +50,8 @@ jobs:
       - name: Copy reports to S3 bucket
         id: copy-reports-to-s3
         env:
-          AWS_BUCKET_NAME: checkstyle-reports
-          AWS_REGION: us-east-2
+          AWS_BUCKET_NAME: checkstyle-diff-reports-bucket
+          AWS_REGION: us-east-1
           REPORT_DIR: ${{ steps.setup-reports.outputs.REPORT_DIR }}
         run: |
           BUCKET_LINK="https://${{env.AWS_BUCKET_NAME}}.s3.${{env.AWS_REGION}}.amazonaws.com"
