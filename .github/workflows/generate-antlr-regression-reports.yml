@@ -15,7 +15,7 @@ on:
 jobs:
   generate_antlr_regression_report:
     runs-on: ubuntu-latest
-    container: maven:3.9.6-eclipse-temurin-17
+    container: checkstyle/jdk-17-groovy-git-mvn-ant-jq
     env:
       MAVEN_OPTS: -Xmx5g
       JAVA_OPTS: -Xmx5g
