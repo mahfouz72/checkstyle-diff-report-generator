@@ -15,7 +15,7 @@ on:
 jobs:
   generate_antlr_regression_report:
     runs-on: ubuntu-latest
-    container: checkstyle/jdk-17-groovy-git-mvn-ant-jq
+    container: maven:3.9.6-eclipse-temurin-17
     env:
       MAVEN_OPTS: -Xmx5g
       JAVA_OPTS: -Xmx5g
@@ -30,6 +30,10 @@ jobs:
         project_name: ${{ fromJson(inputs.project-names) }}
 
     steps:
+      - name: Install groovy, Git, and other tools
+        run: |
+          apt-get update
+          apt-get install -y git jq ant groovy
       - name: Checkout
         uses: actions/checkout@v3
         with:
