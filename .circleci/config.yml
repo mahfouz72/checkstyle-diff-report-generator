@@ -15,7 +15,7 @@ jobs:
         description: "branch name to test on"
         type: string
     docker:
-      - image: checkstyle/jdk-11-groovy-git-mvn:11.0.13__3.0.9__2.25.1__3.6.3
+      - image: maven:3.9.6-eclipse-temurin-17
     resource_class: large
     environment:
       MAVEN_OPTS: -Xmx4096m
